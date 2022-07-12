@@ -16,26 +16,28 @@ global $assets_path; ?>
 <?php endif;?>
 
 <section class="cva">
-	<div class="cvaPC">
-		<div class="cvaPC__tel">
-			<span>お電話でのご予約・ご相談</span>
-		</div>
-		<div class="cvaPC__first">
-			<span>はじめてご来院の方</span>
-			<a href="tel:0120-987-118" class="">
-				0120-987-118
-			</a>
-			<time>診療時間11：00〜20：00</time>
-		</div>
-		<div class="cvaPC__prc">
-			<span>診察券をお持ちの方</span>
-			<ul class="cvaPC--btnWrapper">
-				<li><a href="<?php echo home_url("reserve"); ?>" class="btn-primary">ご予約・ご相談フォーム</a></li>
-				<li><a href="<?php echo home_url("revisit"); ?>" class="btn-sub">各院フリーダイヤル一覧</a></li>
-				<li><a href="<?php echo home_url("pr"); ?>" class="btn-white">取材・プレス関連</a></li>
-			</ul>
-		</div>
-	</div>
+    <div class="cvaPC">
+        <div class="cvaPC__tel">
+            <span class="cvaReserve" style="font-size:16px">お電話でのご予約・ご相談</span>
+        </div>
+        <div class="cvaPC__first">
+            <span style="margin-bottom: 4px;">はじめてご来院の方</span>
+
+            	<a class="cvaPhonea" style="font-size: 28px;" href="tel:0120-987-118" >
+            	<img class="cvaPhoneimg" src="<?php echo $assets_path; ?>/img/cva/icon_smartphone.png">0120-987-118
+            	</a>
+
+            <time class="cvaTime">診療時間11：00〜20：00</time>
+        </div>
+        <div style="margin-left: 26px;" class="cvaPC__prc">
+            <span>診察券をお持ちの方</span>
+            <ul class="cvaPC--btnWrapper">
+                <li><a href="<?php echo home_url("reserve"); ?>" class="btn-primary">ご予約・ご相談フォーム</a></li>
+                <li><a href="<?php echo home_url("revisit"); ?>" class="btn-sub">各院フリーダイヤル一覧</a></li>
+                <li><a href="<?php echo home_url("pr"); ?>" class="btn-white">取材・プレス関連</a></li>
+            </ul>
+        </div>
+    </div>
 	<div class="cvaSP">
 		<div class="cvaSP__contact">
 			<span class="cvaSP__contact--subtitle">Appointment</span>
@@ -58,3 +60,38 @@ global $assets_path; ?>
 		</div>
 	</div>
 </section>
+
+
+
+<!-- 20220712  -->
+<style>
+	.cvaPhoneimg {
+		display: inline;
+		width: auto;
+		padding-right: 12px;
+		height: 29px;
+		vertical-align: middle;
+	}
+	
+    @media screen and (min-width:980px) and (max-width:1084px) {
+	.cvaPhonea {
+		font-size: 1.867vw!important;
+	}
+	.cvaTime {
+		margin-top:14px!important;
+		font-size: 12px!important;
+	}
+	.cvaPhoneimg{
+	    font-size: 1.967vw!important;
+		height: 21px!important;
+		padding-right: 6px!important;
+		vertical-align: middle!important;
+	}
+	.cvaReserve {
+		font-size: 1.267vw!important;
+	}
+}
+</style>
+
+
+
